@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonar - Music Streaming Platform</title>
+    <!-- My CSS Imports -->
+    <link rel="stylesheet" href="/css/Login.modular.css" />
+    <!-- My CSS Imports End -->
+    <!-- My JS Imports -->
+    <script type="module" src="js/LoginUser.js"></script>
+    <script type="module" src="js/CheckIfAuth.js"></script>
+    <!-- My JS Imports End -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="HeaderText">
+      <h1 id="TextTest">
+        You Are One Step Away From Exploring <br />
+        <mark>The World Of Music</mark>
+      </h1>
+    </div>
+    <div class="register-container">
+      <form class="form">
+        <img
+          src="icons/Logo_Sonar_White.png"
+          width="200"
+          height="120"
+          class="logo"
+        />
+
+        <!-- E-mail Input -->
+        <div class="email-container">
+          <label for="EmailInputID" class="forminputlabel">Email:</label>
+          <input
+            type="email"
+            placeholder="sonar@sonar.com"
+            name="emailinput"
+            class="forminput"
+            id="EmailInputID"
+            maxlength="48"
+            required
+          />
+        </div>
+
+        <!-- Password Input -->
+        <div class="password-container">
+          <label for="PasswordInputID" class="forminputlabel">Password:</label>
+          <input
+            type="password"
+            placeholder="************"
+            name="passwordinput"
+            class="forminput"
+            id="PasswordInputID"
+            maxlength="32"
+            required
+          />
+          <input type="checkbox" id="checkboxpassword" />
+          <label for="checkboxpassword" class="forminputlabel"
+            >Show Password</label
+          >
+        </div>
+
+        <!-- Submit Form Button -->
+        <div class="submit-container">
+          <button type="submit" class="Submit-Button" id="SubmitButton">
+            Login
+          </button>
+        </div>
+
+        <p>
+          <a
+            href="/register"
+            rel="noopener noreferrer"
+            target="_self"
+            id="Hyperlink"
+            >Sign-Up</a
+          >
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

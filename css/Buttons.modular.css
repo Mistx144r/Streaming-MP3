@@ -1,0 +1,168 @@
+/* Basic Style Of The Buttons */
+
+/* Play Pause Music Button */
+
+#PlayPause {
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+#PlayPause:hover {
+  transform: scale(1.1);
+}
+
+#PlayPause:active {
+  transform: scale(0.95);
+}
+
+/* Next Music Button */
+
+#NextMusic {
+  position: relative;
+  top: -0.3em;
+  width: 15;
+  height: 15;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+#NextMusic:hover {
+  transform: scale(1.1);
+}
+
+#NextMusic:active {
+  transform: scale(0.9);
+}
+
+/* Return Music Button */
+
+#ReturnMusic {
+  position: relative;
+  top: -0.3em;
+  width: 15;
+  height: 15;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+#ReturnMusic:hover {
+  transform: scale(1.1);
+}
+
+#ReturnMusic:active {
+  transform: scale(0.9);
+}
+
+/* Mute Music Button */
+
+#MuteButton {
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+#MuteButton:hover {
+  transform: scale(1.1);
+}
+
+#MuteButton:active {
+  transform: scale(0.9);
+}
+
+/* Loop Music Button */
+
+#LoopMusic {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#LoopMusic:hover {
+  transform: scale(1.1);
+}
+
+#LoopMusic:active {
+  transform: scale(0.9);
+}
+
+/* Shuffle Music Button */
+
+#Shuffle {
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#Shuffle:hover {
+  transform: scale(1.1);
+}
+
+#Shuffle:active {
+  transform: scale(0.9);
+}
+
+/* Info Music Button */
+
+#InfoButton {
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#InfoButton:hover {
+  transform: scale(1.1);
+}
+
+#InfoButton:active {
+  transform: scale(0.9);
+}
+
+/* Hover And Click Functions */
+#Lyrics {
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#Lyrics:hover {
+  transform: scale(1.1);
+}
+
+#Lyrics:active {
+  transform: scale(0.9);
+}

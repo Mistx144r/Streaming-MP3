@@ -1,0 +1,64 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(17, 17, 17);
+}
+
+/* Divs */
+#TopMenu {
+  width: 100.1vw;
+  position: fixed;
+  left: -0.1em;
+  top: 0; /* Fixa o topo da div no topo da tela */
+  z-index: 1000; /* Garante que o TopMenu fique sobre outros elementos */
+  height: 4.5em;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+
+#logo-icon {
+  width: 70px;
+  height: 70px;
+  margin-left: 28px;
+}
+
+/* Buttons */
+
+#home-button {
+  margin-left: 50px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+#submitmusic-button {
+  margin-left: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+#logout-button {
+  margin-left: 30px;
+  width: 30px;
+  height: 28px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}

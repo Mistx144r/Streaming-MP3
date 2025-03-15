@@ -1,0 +1,138 @@
+/* Home Page */
+
+.home-container {
+  display: flex;
+  background-color: rgb(24, 24, 24);
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+
+  border-radius: 15px;
+
+  padding: 30px 30px 30px 30px;
+
+  overflow: auto;
+}
+
+.home-container::after {
+  content: "";
+  display: block;
+  margin-top: 100em;
+  height: 500em;
+}
+
+.home-container::-webkit-scrollbar {
+  display: none;
+}
+
+.home-container.show {
+  display: flex;
+  visibility: visible;
+}
+
+.home-container.hide {
+  display: none;
+  visibility: hidden;
+}
+
+/* Generated Playlist Div */
+
+.Playlist-Separator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: white;
+  height: 16em;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+.Homepage-Playlist-Button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: Shrink 0.2s forwards;
+}
+
+.Homepage-Playlist-Button:hover {
+  background-color: #202020;
+  border: none;
+  animation: Scale 0.2s forwards;
+}
+
+.Homepage-Playlist-Button:active {
+  animation: Click 0.2s forwards;
+}
+
+.Homepage-Playlist-Button img {
+  width: 12em;
+  height: 12em;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.presentartists {
+  color: rgb(189, 189, 189);
+  text-align: left;
+  font-family: "inter";
+  font-size: 0.75rem;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  margin-top: 10px;
+  width: 160px;
+}
+
+.BaseLabels {
+  color: rgb(255, 255, 255);
+  text-align: left;
+  font-family: "inter";
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+@keyframes Shrink {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes Click {
+  0% {
+    color: rgb(209, 209, 209);
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes Scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Welcome User */
+.WelcomeMessage {
+  color: rgb(255, 255, 255);
+  text-align: left;
+  font-family: "inter";
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.WelcomeMessage span {
+  color: rebeccapurple;
+  font-weight: bolder;
+}

@@ -1,0 +1,386 @@
+body {
+  overflow: hidden;
+}
+
+.content-container {
+  display: flex;
+  background-color: rgb(17, 17, 17);
+  width: 99.14vw;
+  height: 80vw;
+  margin-top: 4.5em;
+  margin-right: 10px;
+}
+
+/* Playlists */
+
+.playlist-container {
+  display: none;
+  background-color: rgb(24, 24, 24);
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+
+  border-radius: 15px;
+
+  padding: 30px 30px 30px 30px;
+
+  overflow: auto;
+}
+
+.playlist-container::after {
+  content: "";
+  display: block;
+  margin-top: 100em;
+  height: 500em;
+}
+
+.playlist-container::-webkit-scrollbar {
+  display: none;
+}
+
+.playlist-container.show {
+  display: flex;
+  visibility: visible;
+}
+
+.playlist-container.hide {
+  display: none;
+  visibility: hidden;
+}
+
+/* Top Menu Playlist */
+
+.TopMenu-container {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  height: 16em;
+}
+
+#Playlist-Image {
+  width: 250px;
+  border-radius: 15px;
+}
+
+.PlaylistPlaceholder {
+  display: inline-block;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+#PlaylistLabel {
+  font-family: "inter";
+  font-weight: normal;
+  font-size: 12px;
+  color: white;
+}
+
+#PlaylistNameLabel {
+  font-family: "inter";
+  font-weight: bold;
+  font-size: 80px;
+  color: white;
+}
+
+#userplaceholder-image {
+  width: 20px;
+  height: 20px;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+}
+
+#username-playlist {
+  margin-left: 6px;
+  font-family: "inter";
+  font-weight: bold;
+  font-size: 10px;
+  color: white;
+}
+
+#userplaceholder-image {
+  border-radius: 20px;
+}
+
+/* Real Playlist */
+.Real-Playlist {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.089);
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.playlist-table {
+  display: grid;
+  grid-template-columns: 0.01fr 3fr 3fr 2fr 1fr; /* Ajuste conforme necessário */
+}
+
+.row {
+  display: contents;
+}
+
+.row.header > div {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.row > div {
+  padding: 8px;
+  border-bottom: 1px solid #333; /* Linha divisória */
+
+  font-family: "inter";
+  font-size: 16px;
+  user-select: none;
+
+  color: rgb(255, 255, 255);
+}
+
+.row > div:hover {
+  background-color: rgb(46, 46, 46);
+}
+
+.row > .numberplay:hover {
+  background-color: rebeccapurple;
+  cursor: pointer;
+}
+
+.row > .numberplay:active {
+  background-color: rgb(69, 14, 124);
+  cursor: pointer;
+}
+
+/* Sidebar */
+
+.sidebarmenu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgb(24, 24, 24);
+
+  width: 115px;
+  height: auto;
+  overflow: auto;
+
+  margin-right: 10px;
+  margin-left: 10px;
+
+  border-radius: 10px;
+}
+
+.sidebarmenu-container button {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  padding: 38px 38px 38px 38px;
+  margin-top: 10px;
+  border: none;
+  background-color: #232323;
+  align-items: center;
+  justify-content: center;
+  animation: HideBack 0.5s forwards;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sidebarmenu-container button:hover {
+  animation: ShowBack 0.5s forwards;
+}
+
+.sidebarmenu-container button:active {
+  animation: ClickedPlaylistButton 0.5s forwards;
+}
+
+.sidebarmenu-container img {
+  display: flex;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.sidebarmenu-container::after {
+  content: "";
+  display: block;
+  margin-top: 100em;
+  height: 500em;
+}
+
+.sidebarmenu-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Add New Musics */
+.addnewmusics {
+  display: inline-block;
+  margin-top: 20px;
+  user-select: none;
+}
+
+#whataboutlabel {
+  font-family: "inter";
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  user-select: none;
+}
+
+#searchfornewmusicplaylist {
+  width: 22em;
+  margin-top: 15px;
+
+  background-color: #333;
+  outline: none;
+  border: none;
+  color: white;
+
+  border-radius: 10px;
+  padding: 8px 8px 8px 8px;
+}
+
+/* Search Anwser */
+
+.musiccards {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.match {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+}
+
+.matchinfo {
+  display: inline-block;
+  justify-content: center;
+  margin-top: 4px;
+  margin-left: 15px;
+}
+
+.match:hover {
+  background-color: #232323;
+}
+
+.match label {
+  font-family: "inter";
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  justify-self: center;
+  user-select: none;
+}
+
+.match #musicnamematch {
+  font-size: 18px;
+}
+
+.match #artistnamematch {
+  font-size: 12px;
+  color: rgb(185, 185, 185);
+}
+
+.match .addnewmusictoplaylistbutton {
+  position: relative;
+  top: 0.2em;
+  margin-left: 8px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.match .addnewmusictoplaylistbutton:hover {
+  transform: scale(1.1);
+}
+
+.match .addnewmusictoplaylistbutton:active {
+  transform: scale(0.95);
+}
+
+.match img {
+  border-radius: 5px;
+}
+
+/* Add New Music */
+#DialogNewMusic[open] {
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 10px 10px 10px;
+  border-radius: 15px;
+  gap: 5px;
+}
+
+#DialogNewMusic label {
+  font-family: "inter";
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+
+#submitMusicBtn {
+  margin-top: 10px;
+}
+
+/* Content Resize */
+
+.content-container.shrink {
+  animation: ContentShrink 0.5s forwards;
+}
+
+.content-container.scale {
+  animation: ContentScale 0.5s forwards;
+}
+
+@keyframes ContentShrink {
+  0% {
+    width: 99.14vw;
+  }
+  100% {
+    width: 78.5%;
+  }
+}
+
+@keyframes ContentScale {
+  0% {
+    width: 78.5%;
+  }
+  100% {
+    width: 99.14vw;
+  }
+}
+
+@keyframes HideBack {
+  0% {
+    background-color: #232323;
+  }
+  100% {
+    background-color: #181818;
+  }
+}
+
+@keyframes ShowBack {
+  0% {
+    background-color: #181818;
+  }
+  100% {
+    background-color: #232323;
+  }
+}
+
+@keyframes ClickedPlaylistButton {
+  0% {
+    background-color: #232323;
+  }
+  100% {
+    background-color: #303030;
+  }
+}

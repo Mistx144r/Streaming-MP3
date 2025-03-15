@@ -1,0 +1,112 @@
+#Audio-Controller {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7em;
+  background-color: rgb(19, 19, 19);
+  z-index: 1000;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+#Controllers {
+  align-items: center;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  top: -1.5em;
+  position: relative; /* Adicionado para posicionamento relativo */
+  transform: scale(1.1);
+}
+
+#MegaDiv {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  top: -2.2em;
+  position: relative; /* Adicionado para posicionamento relativo */
+}
+
+#InfoMusic {
+  position: relative;
+  left: 1em;
+  top: 1em;
+  align-items: center;
+}
+
+#PlayPause {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#MusicLabel {
+  font-family: "Inter";
+  font-weight: bold;
+  color: white;
+  font-size: 24px;
+  margin-left: 0.5em;
+}
+
+#AlbumPng {
+  border: 2px solid rgb(41, 41, 41);
+  border-radius: 0.5em;
+  float: left;
+}
+
+#Artista {
+  margin-left: 0.8em;
+  font-family: "Inter";
+  color: white;
+  font-size: 12px;
+  margin-left: 1.05em;
+}
+
+#MinutagemAtual {
+  position: relative;
+  font-family: "Inter";
+  color: white;
+  font-size: 12px;
+  top: -1.4em;
+}
+
+#MinutagemTotal {
+  position: relative;
+  font-family: "Inter";
+  color: white;
+  font-size: 12px;
+  top: -1.4em;
+}
+
+/* Volume Controller */
+
+#Volume {
+  cursor: pointer;
+}
+
+#VolumeControl {
+  position: absolute; /* Posicionamento absoluto */
+  right: 2.5em; /* Alinhar à direita */
+  bottom: 2.4em; /* Alinhar à parte inferior */
+  display: flex;
+  align-items: center;
+}
+
+#VolumeControl i {
+  margin-right: 0.5em; /* Espaço entre o ícone e o controle de volume */
+}
+
+/* Music Time Ranger */
+
+#MusicTimeDiv {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#MusicTime {
+  position: relative;
+  top: -1em;
+  width: 40em;
+  cursor: pointer;
+}

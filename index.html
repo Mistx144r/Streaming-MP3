@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonar - Music Streaming Platform</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/SideInfo.modular.css" />
+    <link rel="stylesheet" href="css/Buttons.modular.css" />
+    <link rel="stylesheet" href="css/TopMenu.modular.css" />
+    <link rel="stylesheet" href="css/Playlist.modular.css" />
+    <link rel="stylesheet" href="css/ContextPlaylist.modular.css" />
+    <link rel="stylesheet" href="css/Home.modular.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script type="module" src="js/AudioController.js"></script>
+    <script type="module" src="js/AnimationSideBarController.js"></script>
+    <script type="module" src="js/ContextMenuPlaylist.js"></script>
+    <script type="module" src="js/ContextCreatePlay.js"></script>
+    <script type="module" src="js/ContextMusic.js"></script>
+    <script type="module" src="js/AddNewMusic.js"></script>
+    <script type="module" src="js/Search.js"></script>
+    <script type="module" src="js/LoadPlaylists.js"></script>
+    <script type="module" src="js/CheckIfAuth.js"></script>
+    <script type="module" src="js/Logout.js"></script>
+    <script type="module" src="js/Home.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <ul class="contextmenuplaylist">
+      <li class="playlist-context-link" id="OpenPlaylist">
+        <ion-icon name="open-outline"></ion-icon>
+        <span class="playlistcontext-label">Abrir Playlist</span>
+      </li>
+      <li class="playlist-context-link" id="ChangePlaylistImage">
+        <ion-icon name="pencil-outline"></ion-icon>
+        <span class="playlistcontext-label">Trocar Capa Da Playlist</span>
+      </li>
+      <li class="playlist-context-link" id="DeletePlaylist">
+        <ion-icon name="trash-outline"></ion-icon>
+        <span class="playlistcontext-label">Excluir Playlist</span>
+      </li>
+    </ul>
+
+    <ul class="MusicContext">
+      <li class="playlist-context-link" id="DeleteMusic">
+        <span class="playlistcontext-label">Excluir Música</span>
+      </li>
+    </ul>
+
+    <dialog id="DialogNewPlaylist">
+      <label for="NewPlaylistName">Name: </label>
+      <input type="text" id="NewPlaylistName" />
+
+      <button id="submitMusicBtnPlay">Submit</button>
+    </dialog>
+
+    <ul class="contextmenuplaylistcreation">
+      <li class="playlist-context-link" id="CreatePlaylist">
+        <ion-icon name="create-outline"></ion-icon>
+        <span class="playlistcontext-label">Criar Playlist</span>
+      </li>
+    </ul>
+
+    <div id="TopMenu">
+      <img src="icons/logo_icon.png" id="logo-icon" />
+      <button id="home-button">
+        <img src="icons/home_white.png" alt="" height="30" width="30" />
+      </button>
+      <button id="submitmusic-button">
+        <img src="icons/Upload.png" alt="" height="30" width="30" />
+      </button>
+      <button id="logout-button">
+        <img
+          src="icons/logout_white.png"
+          alt="Log-Out"
+          height="30"
+          width="30"
+        />
+      </button>
+    </div>
+
+    <div class="content-container" id="content-container">
+      <div class="sidebarmenu-container" id="sidebarmenuplay"></div>
+      <div class="playlist-container">
+        <div class="TopMenu-container">
+          <img src="imgs/playlist/Liked_Musics.png" id="Playlist-Image" />
+          <div class="PlaylistPlaceholder">
+            <label id="PlaylistLabel">Playlist</label> <br />
+            <label id="PlaylistNameLabel">None</label> <br />
+            <div class="user-container">
+              <img
+                src="icons/userplaceholder.webp"
+                alt="userplaceholder"
+                id="userplaceholder-image"
+              />
+              <label id="username-playlist"></label>
+            </div>
+          </div>
+        </div>
+        <div class="Real-Playlist">
+          <div class="playlist-table" id="playlist-table">
+            <div class="row header" id="rowheader">
+              <div>#</div>
+              <div>Título</div>
+              <div>Artista(s)</div>
+              <div>Adicionada em</div>
+              <div>Duração</div>
+            </div>
+          </div>
+        </div>
+        <hr id="end-divisor-playlist" />
+        <div class="addnewmusics" id="SearchPlaylistDiv">
+          <label id="whataboutlabel">What About Add New Musics</label> <br />
+          <input
+            type="search"
+            name="search"
+            id="searchfornewmusicplaylist"
+            placeholder="Search..."
+          />
+        </div>
+        <div class="musiccards" id="musiccards"></div>
+      </div>
+      <div class="home-container">
+        <label class="WelcomeMessage"
+          >Seja Bem Vindo <span id="UserWelcomeMessage">${User}</span></label
+        >
+        <label class="BaseLabels">Mix Do Dia</label>
+        <div class="Playlist-Separator" id="DayMix">
+          <div class="Homepage-Playlist-Div"></div>
+        </div>
+      </div>
+      <div id="SideInfo">
+        <div id="VideoClipDiv">
+          <video
+            id="VideoClip"
+            src="videos/NoMusicVid.mp4"
+            height="710"
+            width="400"
+            loop
+            preload="auto"
+            autoplay
+            muted
+          ></video>
+          <div id="vignette"></div>
+          <label id="ActualPlaylistLabel">Musicas Curtidas</label>
+        </div>
+        <div id="MusicInfoOnBiggerScreen">
+          <label id="MusicName">None</label>
+          <label id="Artist">None</label>
+          <div id="SobreArtista">
+            <img
+              src="icons/NoAbout.png"
+              alt=""
+              width="1920"
+              height="1080"
+              id="ArtistImage"
+            />
+            <label id="AboutArtist">Sobre o artista</label> <br />
+            <label id="ArtistAboutMeName">None</label><br />
+            <label id="Desc"></label>
+          </div>
+          <div id="ProximaMusicaLabel">
+            <img
+              src="imgs/NoSong.jpg"
+              alt=""
+              width="1920"
+              height="1080"
+              id="NextMusicImage"
+            />
+            <label id="NextMusicName">None</label>
+            <br />
+            <label id="NextArtistName">None</label>
+          </div>
+        </div>
+      </div>
+      <dialog id="DialogNewMusic">
+        <label for="NewNameMusicSubmit">Name: </label>
+        <input type="text" id="NewNameMusicSubmit" />
+
+        <label for="NewArtistMusicSubmit">Artista(s): </label>
+        <input type="text" id="NewArtistMusicSubmit" />
+
+        <label for="NewDescMusicSubmit">Desc: </label>
+        <input type="text" id="NewDescMusicSubmit" />
+
+        <label for="NewAudioMusicSubmit">Audio: </label>
+        <input type="file" id="NewAudioMusicSubmit" />
+
+        <label for="NewVideoMusicSubmit">Mini-Video: </label>
+        <input type="file" id="NewVideoMusicSubmit" />
+
+        <label for="NewImageAboutArtistMusicSubmit">Imagem-Artista: </label>
+        <input type="file" id="NewImageAboutArtistMusicSubmit" />
+
+        <label for="NewAlbumImageSubmit">Imagem-Album: </label>
+        <input type="file" id="NewAlbumImageSubmit" />
+
+        <button id="submitMusicBtn">Submit</button>
+      </dialog>
+    </div>
+
+    <div id="Audio-Controller">
+      <audio preload="auto" src="" id="PlayingMusic"></audio>
+      <div id="InfoMusic">
+        <!-- Mostrar Nome Faixa Atual E Etc -->
+        <img src="imgs/NoSong.jpg" height="80" width="80" id="AlbumPng" /><br />
+        <label id="MusicLabel">None</label> <br />
+        <label id="Artista">None</label>
+      </div>
+      <br />
+
+      <div id="VolumeControl">
+        <!-- SideInfo -->
+        <button id="InfoButton" tabindex="-1">
+          <img src="icons/Book.png" height="20" width="20" />
+        </button>
+        <!-- Lyrics -->
+        <button id="Lyrics" tabindex="-1">
+          <img src="icons/lyrics_white.png" height="20" width="20" />
+        </button>
+        <!-- Volume -->
+        <button id="MuteButton" tabindex="-1">
+          <img src="icons/VolumeOn.png" height="20" width="20" />
+        </button>
+
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="25"
+          class="slider"
+          tabindex="-1"
+          id="Volume"
+        />
+      </div>
+
+      <div id="MegaDiv">
+        <!-- Controles -->
+        <div id="Controllers">
+          <!-- Loopar Faixa -->
+          <button id="Shuffle" tabindex="-1">
+            <img src="icons/Shuffle.png" class="icon" height="15" width="15" />
+          </button>
+          <!-- Volta Faixa -->
+          <button id="ReturnMusic" tabindex="-1">
+            <img
+              src="icons/Voltar_White.png"
+              alt="<"
+              class="icon"
+              height="15"
+              width="15"
+            />
+          </button>
+          <!-- Play/Pause -->
+          <button id="PlayPause" tabindex="-1">
+            <img
+              src="icons/Play_White.png"
+              alt="Play"
+              class="icon"
+              height="30"
+              width="30"
+            />
+          </button>
+          <!-- Avancar Faixa -->
+          <button id="NextMusic" tabindex="-1">
+            <img
+              src="icons/Proximo_White.png"
+              alt=">"
+              class="icon"
+              height="15"
+              width="15"
+            />
+          </button>
+          <!-- Loopar Faixa -->
+          <button id="LoopMusic" tabindex="-1">
+            <img src="icons/Loop.png" class="icon" height="15" width="15" />
+          </button>
+        </div>
+
+        <!-- Tempo Da Musica Atual -->
+        <div id="MusicTimeDiv">
+          <label tabindex="-1" id="MinutagemAtual">00:00</label>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="slider"
+            tabindex="-1"
+            id="MusicTime"
+          />
+          <label tabindex="-1" id="MinutagemTotal">00:00</label>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

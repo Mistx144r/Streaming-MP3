@@ -1,0 +1,301 @@
+/* Divs */
+#MusicInfoOnBiggerScreen {
+  background-color: rgb(15, 15, 15);
+  width: 25em;
+  height: 215em;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  bottom: -1em;
+  border-radius: 10px;
+  animation: InfoBarIn 0.5s forwards;
+}
+
+#ActualPlaylistLabel {
+  position: absolute;
+  color: white;
+  left: 1.2em;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Inter";
+  top: 2em;
+  pointer-events: none;
+}
+
+/* Side Bar Info */
+#SideInfo {
+  background-color: rgb(27, 27, 27);
+  position: absolute;
+  height: 250em;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  overflow: auto;
+  top: 4.5em;
+  transform: translateX(25em);
+  border-radius: 15px;
+}
+
+#SideInfo::after {
+  content: "";
+  display: block;
+  height: 235em;
+}
+
+#SideInfo::-webkit-scrollbar {
+  display: none;
+}
+
+#SideInfo.in {
+  animation: SideBarIn 0.5s forwards;
+}
+
+#SideInfo.out {
+  animation: SideBarOut 0.5s forwards;
+}
+
+/* Video Clip */
+
+#VideoClip {
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+#VideoClip:hover + #vignette {
+  animation: vignetteEffectIn 0.25s forwards;
+}
+
+#VideoClipDiv:hover + #MusicInfoOnBiggerScreen {
+  animation: InfoBarOut 0.5s forwards;
+}
+
+#vignette {
+  animation: vignetteEffectOut 0.25s forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-shadow: inset 2000px 0px 2000px rgba(0, 0, 0, 0.705);
+}
+
+/* Music Label Stuff */
+#MusicName {
+  position: absolute;
+  color: white;
+  left: 0.55em;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Inter";
+  top: -2.5em;
+  pointer-events: none;
+}
+
+#Artist {
+  position: absolute;
+  color: rgb(201, 201, 201);
+  left: 1em;
+  font-size: 15px;
+  font-family: "Inter";
+  top: -2em;
+  pointer-events: none;
+}
+
+/* Sobre O Artista */
+
+#SobreArtista {
+  position: relative;
+  border-bottom: 2.5em solid;
+  border-color: rgb(20, 20, 20);
+  top: 1em;
+  height: auto;
+  width: auto;
+  background-color: rgb(20, 20, 20);
+  border-radius: 0.5em;
+  transform: scale(0.95);
+}
+
+#AboutArtist {
+  position: absolute;
+  color: white;
+  left: 2em;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Inter";
+  z-index: 2;
+  top: 1.9em;
+}
+
+#ArtistAboutMeName {
+  position: relative;
+  color: white;
+  left: 1.3em;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Inter";
+  top: 0.8em;
+}
+
+#Desc {
+  position: relative;
+  color: rgb(185, 185, 185);
+  left: -0.5em;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Inter";
+  top: 2em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 4;
+  max-height: 60px;
+  -webkit-box-orient: vertical;
+  transform: scaleX(0.85);
+  animation: TextDisapear 1s forwards;
+}
+
+#Desc:hover {
+  animation: TextAppear 0.5s forwards;
+}
+
+#ArtistImage {
+  position: relative;
+  margin-top: 1em;
+  width: 23em;
+  height: 15em;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  object-fit: cover;
+  right: -1em;
+}
+
+/* Next Music */
+
+#ProximaMusicaLabel {
+  position: relative;
+  top: 1em;
+  height: auto;
+  width: auto;
+  background-color: rgb(20, 20, 20);
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  transform: scale(0.95);
+}
+
+#NextMusicImage {
+  position: relative;
+  margin-top: 1em;
+  width: 5em;
+  height: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  right: -1em;
+}
+
+#NextMusicName {
+  position: relative;
+  color: white;
+  left: 1.8em;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Inter";
+  top: -2.7em;
+}
+
+#NextArtistName {
+  position: relative;
+  color: rgb(170, 170, 170);
+  left: 9.4em;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Inter";
+  top: -3.5em;
+}
+
+/* Animation Vignette*/
+@keyframes vignetteEffectIn {
+  0% {
+    box-shadow: inset 2000px 0px 2000px rgba(0, 0, 0, 0.505);
+  }
+  100% {
+    box-shadow: inset 2000px 0px 2000px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes vignetteEffectOut {
+  0% {
+    box-shadow: inset 2000px 0px 2000px rgba(0, 0, 0, 0); /* Vignette visível */
+  }
+  100% {
+    box-shadow: inset 2000px 0px 2000px rgba(0, 0, 0, 0.505); /* Vignette desaparece */
+  }
+}
+
+/* Animation SideBar*/
+@keyframes SideBarOut {
+  0% {
+    transform: translateX(0em);
+  }
+  100% {
+    transform: translateX(25em);
+  }
+}
+
+@keyframes SideBarIn {
+  0% {
+    transform: translateX(25em);
+  }
+  100% {
+    transform: translateX(0em);
+  }
+}
+
+/* Animation InfoBarIn*/
+@keyframes InfoBarIn {
+  0% {
+    transform: translateY(6em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes InfoBarOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(6em);
+  }
+}
+
+/* Animation AboutArtistText*/
+@keyframes TextAppear {
+  0% {
+    max-height: 60px;
+    -webkit-line-clamp: 3;
+  }
+
+  100% {
+    max-height: 120px;
+    -webkit-line-clamp: 999;
+  }
+}
+
+@keyframes TextDisapear {
+  0% {
+    -webkit-line-clamp: 999;
+    max-height: 120px;
+  }
+
+  100% {
+    max-height: 60px;
+    -webkit-line-clamp: 3;
+  }
+}
