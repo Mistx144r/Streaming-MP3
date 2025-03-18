@@ -2,6 +2,8 @@
 
 Sonar é um aplicativo de **streaming de músicas na nuvem**, oferecendo uma experiência diferenciada ao usuário. Além de permitir o upload de qualquer música para reprodução em qualquer lugar, o Sonar conta com uma interface interativa que inclui um **mini player retrátil** com informações detalhadas sobre a faixa em reprodução, próximas músicas e detalhes sobre o artista, incluindo fotos.
 
+![Texto Alternativo]([https://media.giphy.com/media/XYZ123/giphy.gif](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExam9reWIwY3Z0ZWM3cjczdzJwOWNsNmxrOHU5d2kxbjQxeWxvOHp3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yR5A5250tukDK0N8NT/giphy.gif))
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **Back-end:** Express.js (API REST)
