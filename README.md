@@ -1,8 +1,8 @@
 # Sonar (Streaming-MP3)
 
-Sonar é um aplicativo de **streaming de músicas na nuvem**, oferecendo uma experiência diferenciada ao usuário. Além de permitir o upload de qualquer música para reprodução em qualquer lugar, o Sonar conta com uma interface interativa que inclui um **mini player retrátil** com informações detalhadas sobre a faixa em reprodução, próximas músicas e detalhes sobre o artista, incluindo fotos.
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHE2MjF5ZzJ2cmoyZjByMG96dng2azJkaWRpMGJxNnBrZW1yOWljMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9UDK779yNcEmaYxXBx/giphy.gif" alt="Gif Login" width="60%" />
 
-![Texto Alternativo](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXVocTUwc2d0a29ueXozYXhhbWt6ZnI1OHRrOG9rMTAyb2ZhZWZxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yR5A5250tukDK0N8NT/giphy.gif)
+Sonar é um aplicativo de **streaming de músicas na nuvem**, oferecendo uma experiência diferenciada ao usuário. Além de permitir o upload de qualquer música para reprodução em qualquer lugar, o Sonar conta com uma interface interativa que inclui um **mini player retrátil** com informações detalhadas sobre a faixa em reprodução, próximas músicas e detalhes sobre o artista, incluindo fotos.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -20,6 +20,8 @@ Sonar é um aplicativo de **streaming de músicas na nuvem**, oferecendo uma exp
 - Playlists diárias aleatorias de acordo com seu gosto na aba "Home"
 - Adicionar novas músicas ao banco de dados
 - Interface interativa com informações sobre a faixa e artista
+
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGN4dWtvajdyc2ZyNHV2a3U5aGZiN3dmcWdxYTZkMHgxcmcxNXQ3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tJpQHYSD2BrTpWdYhi/giphy.gif" alt="Gif Login" width="60%" />
 
 ## 🔄 Melhorias Futuras
 
